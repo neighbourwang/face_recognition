@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>face</title>
+
+  <!-- Bootstrap -->
+  <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/face.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar">人脸识别</span>
+        <span class="icon-bar">AR</span>
+        <span class="icon-bar">Map</span>
+      </button>  -->
+        <a class="navbar-brand while-color" href="#">FACEFIND</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+  <!-- <ul class="nav nav-pills">
+    <li role="presentation" class="active"><a href="#">人脸识别</a></li>
+    <li role="presentation"><a href="#">AR</a></li>
+    <li role="presentation"><a href="#">Map</a></li>
+  </ul> -->
+  <div class="container-fluid" id="upload">
+    <form id="form">
+      <div class="form-group">
+        <label for="name">请输入名称</label>
+        <input type="text" class="form-control" id="name" placeholder="name">
+      </div>
+      <div class="form-group">
+        <label for="yuzhi">请输入阈值</label>
+        <input type="number" class="form-control" id="yuzhi" placeholder="" value="50">
+      </div>
+      <div class="form-group">
+        <label for="recognize">上传被比对图片</label>
+        <input type="file" id="recognize">
+        <p class="help-block">Upload pictures you want to be compared to</p>
+      </div>
+      <div class="form-group">
+        <label for="compare">上传比对图片</label>
+        <input type="file" id="compare">
+        <p class="help-block">Upload picture you want to compare</p>
+      </div>
+    </form>
+    <button class="btn btn-default pull-right mgt" type="submit" id="submit">Submit</button>
+  </div>
+  <div id="success" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12" id="result">
+        <!-- <span>div</span> -->
+        <img class="img-responsive" id="image" 　class="image" alt="">
+      </div>
+      <!-- <div class="col-sm-12" id="canvas">
+        <span>canvas</span>
+        <canvas id="myCanvas"></canvas>
+      </div>  -->
+    </div>
+    <button class="btn btn-default pull-right mgt" type="back" id="back">返回</button>
+  </div>
+  <nav class="navbar navbar-inverse navbar-fixed-bottom">
+  </nav>
+  <div class="load" id="loading">
+    <!-- <div class="loadEffect">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div> -->
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="./assets/js/jquery-3.2.1.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="./assets/js/face.js"></script>
+</body>
+
+</html>
